@@ -51,6 +51,21 @@
    }
   </style>
  
+  <script>
+   var today = new Date();
+   function f(x)
+   {document.getElementById('tt1').value=document.getElementById('tt1').value+x;}
+   
+   function g(x)
+{var t=parseInt(document.getElementById('tt1').value);
+if(x==1) today.setYear(t); 
+if(x==2) today.setMonth(t);
+if(x==3) today.setDate(t);}
+   
+   
+   function ff()
+   {document.getElementById('tt2').value=today;}
+   </script>
 </head>
  <body>
   <div id="container">
@@ -61,7 +76,7 @@
     
     <p>3 лабораторна робота</p>
     <form action="" method="get">
-    <tabl>
+    <table>
     <tr>
     <td>Введення</td><td colspan="2"><input type="text" name="tx1" id="tt1" value=""></td>
     </tr>
@@ -87,7 +102,7 @@
     </tr>
      <tr> 
     <td colspan="2">input type="button" id="y1" value="рік" onclick="g(1)"</td>
-    <td>input type="button" id="f1" value="функція" onclick="ff("getMonth")"</td> 
+    <td>input type="button" id="f1" value="функція" onclick="ff()"</td> 
     <tr>
     <td>Результат</td><td colspan="2"><input type="text" name="tx2" id="tt2" value=""></td></tr>
     <tr> 
@@ -95,7 +110,7 @@
     
     
    
-    </tabl>
+    </table>
     </form>    
     
     
